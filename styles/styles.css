@@ -1,0 +1,356 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------- 2. Typography (functionele/estetische doeleinden tekst) ----------------------------------- */
+h1{
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navigation {
+    color: var(--floating-words-color);
+    font-weight: lighter;
+}
+
+#nav-link {
+    color: var(--floating-words-color);
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+#intro-link {
+    text-decoration: none;
+    color: var(--special-bg-color)
+}
+
+.intro-h2 {
+    color: var(--special-bg-color);
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+.projects {
+    background-color: var(--project-bg-color);
+}
+
+.projectlink {
+    margin-top: 50px;
+    color: var(--special-bg-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* --------------- 3.1 Reusables ----------------------- */
+:root{
+    --main-bg-color: #4B49E8;
+    --special-bg-color:#5722CD;
+    --button-color:#ED4385;
+    --project-bg-color: #F3F6F9;
+    --floating-words-color: #F2F0FF;
+    --text-color:#0C0C0C;
+    --servicetile-color: #7A7A7A;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+header {
+    background: var(--main-bg-color) linear-gradient(to right, var(--main-bg-color), var(--special-bg-color));
+}
+
+.header-1 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    padding: 0 20px;
+}
+
+.navigation {
+    display: flex;
+    flex-basis: 50px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 400px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header-flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: auto;
+    padding: 100px 300px ;
+    color: var(--floating-words-color);
+    }
+
+.header {
+    display: flex;
+    flex: 0 1;
+    text-align: center;
+}
+
+.header-text {
+    font-weight: lighter;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.button-header {
+    background-color:var(--button-color);
+    padding: 20px 40px;
+    color: var(--floating-words-color);
+    text-transform: uppercase;
+    border-radius: 60px;
+    box-shadow: 5px 5px 10px var(--special-bg-color);
+    border-color: var(--button-color);
+}
+
+.img-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#wave-on-stick {
+    width: 100px;
+    height: 100px;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+.intro-flex {
+    display: flex;
+    flex-basis: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 200px;
+}
+
+.intro-h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size:30px;
+}
+
+.intro-p {
+    padding: 50px 0;
+}
+
+/* --------------- 4.3 Articles ------------------- */
+
+.articler, .articlev, .articlew{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 500px;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    padding: 50px 50px;
+}
+
+.articlev {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.article-content {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 50px;
+    }
+
+.wave {
+    width: 60px;
+    height: 60px;
+}
+
+.articlep {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 400px;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 24px grey;
+}
+
+/* --------------- 4.4 Tiles ------------------- */
+
+.sec.service {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 100vw;
+}
+
+.services-tiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-basis: 500px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.service {
+    border: var(--special-bg-color) solid 2px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 400px;
+    padding: 30px 30px;
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.2);
+    margin: 30px 30px;
+}
+
+.serviceimg {
+    height: 100px;
+    width: 100px;
+}
+
+.serviceh2 {
+    color: var(--special-bg-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* --------------- 4.5 Form ------------------- */
+
+.section-contact{
+    background: var(--main-bg-color) linear-gradient(to right, var(--main-bg-color), var(--special-bg-color));
+    display: flex;
+    flex-direction: column;
+    flex-basis: 800px;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 800px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 500px;
+    width: 800px;
+}
+
+#contact {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: var(--floating-words-color);
+    font-size: 45px;
+}
+
+#contacttxt {
+    margin-bottom: 50px;
+    color: var(--floating-words-color);
+    font-size: 18px;
+}
+
+.input-style {
+    color: var(--floating-words-color);
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#name-field {
+    border-radius: 4px;
+    min-height:50px;
+}
+
+#email-field {
+    border-radius: 4px;
+    min-height:50px;
+}
+
+#message-field {
+    border-radius: 4px;
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+.bform {
+    margin-top: 20px;
+    width:20%;
+    align-self: center;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 800px;
+    align-items: center;
+    color: var(--floating-words-color);
+    background-color: var(--text-color);
+}
+
+.footer-text{
+    padding: 30px 30px;
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
